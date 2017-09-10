@@ -24,7 +24,7 @@ object Solution {
     }
 
     def format(d: Double): String = {
-      "%.6f".format(d)
+      f"$d%.6f"
     }
 
     Map(
