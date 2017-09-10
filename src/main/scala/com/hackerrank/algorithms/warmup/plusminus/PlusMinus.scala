@@ -35,16 +35,13 @@ object PlusMinus {
   }
 
   def main(args: Array[String]) {
-    val sc = new Scanner(System.in);
-    var n = sc.nextInt()
-    var arr = new Array[Int](n)
-    for (arr_i <- 0 until n) {
-      arr(arr_i) = sc.nextInt()
-    }
+    val sc = new Scanner(System.in)
+    val n = sc.nextInt()
+    val arr = (for (_ <- 0 until n) yield sc.nextInt) toArray
     val res = solution(arr)
-    val separator = System.lineSeparator()
     val formattedResult = List(Positive, Negative, Zero)
-      .map(res).mkString(separator)
-    System.out.println(formattedResult)
+      .map(res)
+      .mkString(f"%n")
+    println(formattedResult)
   }
 }

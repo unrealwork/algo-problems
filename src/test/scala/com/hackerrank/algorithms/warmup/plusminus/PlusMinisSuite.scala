@@ -7,7 +7,7 @@ import org.scalatest.junit.JUnitRunner
 
 
 @RunWith(classOf[JUnitRunner])
-class GradingSuite extends FunSuite {
+class PlusMinisSuite extends FunSuite {
   test("Description exmaple: -4, 3, -9, 0, 4, 1") {
     val nums = Array(-4, 3, -9, 0, 4, 1)
     val expectedResult = Map(
