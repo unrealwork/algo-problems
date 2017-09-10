@@ -1,6 +1,6 @@
 package com.hackerrank.algorithms.warmup.plusminus
 
-import Solution.Sign.{Negative, Positive, Sign, Zero}
+import PlusMinus.Sign.{Negative, Positive, Sign, Zero}
 import java.util.Scanner
 
 /**
@@ -11,7 +11,7 @@ import java.util.Scanner
   *
   * Print the decimal value of each fraction on a new line.
   */
-object Solution {
+object PlusMinus {
 
   object Sign extends Enumeration {
     type Sign = Value
