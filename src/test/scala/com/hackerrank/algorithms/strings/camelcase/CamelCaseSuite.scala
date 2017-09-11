@@ -1,4 +1,4 @@
-package com.hackerrank.algorithms.strings
+package com.hackerrank.algorithms.strings.camelcase
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
