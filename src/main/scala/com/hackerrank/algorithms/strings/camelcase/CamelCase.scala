@@ -1,4 +1,4 @@
-package com.hackerrank.algorithms.strings
+package com.hackerrank.algorithms.strings.camelcase
 
 object CamelCase {
   def solution(s: String): Int = {

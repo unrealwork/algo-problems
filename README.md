@@ -6,7 +6,8 @@
 #### Implementation
 * [Grading](https://www.hackerrank.com/challenges/grading) - [source](src/main/scala/com/hackerrank/algorithms/implementation/grading/Grading.scala)
 #### Strings
-* [CamelCase](https://www.hackerrank.com/challenges/camelcase) - [source](src/main/scala/com/hackerrank/algorithms/strings/CamelCase.scala)
+* [CamelCase](https://www.hackerrank.com/challenges/camelcase) - [source](src/main/scala/com/hackerrank/algorithms/strings/camelcase/CamelCase.scala)
+* [TwoCharacters](https://www.hackerrank.com/challenges/two-characters) - [source](src/main/scala/com/hackerrank/algorithms/strings/twocharacters/TwoCharacters.scala)
 ### Functional Programming
 #### Introduction
 * [List Repliction](https://www.hackerrank.com/challenges/fp-list-replication) - [source](src/main/scala/com/hackerrank/functional/introduction/listreplication/ListReplication.scala)
