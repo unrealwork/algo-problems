@@ -9,6 +9,7 @@
 * [CamelCase](https://www.hackerrank.com/challenges/camelcase) - [source](src/main/scala/com/hackerrank/algorithms/strings/camelcase/CamelCase.scala)
 * [TwoCharacters](https://www.hackerrank.com/challenges/two-characters) - [source](src/main/scala/com/hackerrank/algorithms/strings/twocharacters/TwoCharacters.scala)
 * [CaesarCipher](https://www.hackerrank.com/challenges/caesar-cipher-1) - [source](src/main/scala/com/hackerrank/algorithms/strings/caesarcipher/CaesarCipher.scala)
+* [Pangrams](https://www.hackerrank.com/challenges/pangrams) - [source](src/main/scala/com/hackerrank/algorithms/strings/pangrams/Pangrams.scala)
 ### Functional Programming
 #### Introduction
 * [List Repliction](https://www.hackerrank.com/challenges/fp-list-replication) - [source](src/main/scala/com/hackerrank/functional/introduction/listreplication/ListReplication.scala)
