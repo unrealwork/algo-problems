@@ -11,4 +11,5 @@
 * [Separated Numbers](https://www.hackerrank.com/challenges/separate-the-numbers) - [source](src/main/scala/com/hackerrank/algorithms/strings/separatenumbers/SeparateNumbers.scala)
 ### Functional Programming
 #### Introduction
-* [List Repliction](https://www.hackerrank.com/challenges/fp-list-replication) - [source](src/main/scala/com/hackerrank/functional/introduction/listreplication/ListReplication.scala)
+* [List Repliction](https://www.hackerrank.com/challenges/fp-list-replication) - [source](src/main/scala/com/hackerrank/fp/introduction/listreplication/ListReplication.scala)
+* [Filter Array](https://www.hackerrank.com/challenges/fp-filter-array) - [source](src/main/scala/com/hackerrank/fp/introduction/filterarray/FilterArray.scala)

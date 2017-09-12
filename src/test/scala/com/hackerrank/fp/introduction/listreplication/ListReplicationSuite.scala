@@ -1,4 +1,4 @@
-package com.hackerrank.functional.introduction.listreplication
+package com.hackerrank.fp.introduction.listreplication
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite

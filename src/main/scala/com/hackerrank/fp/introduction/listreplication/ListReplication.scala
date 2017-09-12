@@ -1,4 +1,4 @@
-package com.hackerrank.functional.introduction.listreplication
+package com.hackerrank.fp.introduction.listreplication
 
 object ListReplication {
   def f(num: Int, arr: List[Int]): List[Int] =
