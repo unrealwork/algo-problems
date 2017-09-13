@@ -16,5 +16,7 @@
 * [List Repliction](https://www.hackerrank.com/challenges/fp-list-replication) - [source](src/main/scala/com/hackerrank/fp/introduction/listreplication/ListReplication.scala)
 * [Filter Array](https://www.hackerrank.com/challenges/fp-filter-array) - [source](src/main/scala/com/hackerrank/fp/introduction/filterarray/FilterArray.scala)
 * [Filter Positions in a list](https://www.hackerrank.com/challenges/fp-filter-positions-in-a-list) - [source](src/main/scala/com/hackerrank/fp/introduction/filterpositions/FilterPositions.scala)
+#### Recursion
+* [Sums of Power](https://www.hackerrank.com/challenges/functional-programming-the-sums-of-powers) - [source](src/main/scala/com/hackerrank/fp/recursion/sumsofpower/SumsOfPower.scala)
 #### Ad-hoc
 * [String Rotation](https://www.hackerrank.com/challenges/rotate-string) - [source](src/main/scala/com/hackerrank/fp/adhoc/rotatestring/RotateString.scala)
