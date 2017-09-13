@@ -2,6 +2,6 @@ package com.hackerrank.fp.introduction.sumofoddelements
 
 object SumOfOddElements {
   def f(arr: List[Int]): Int = arr
-    .filter(e => e % 2 == 1)
+    .filter(e => e.abs % 2 == 1)
     .sum
 }
