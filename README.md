@@ -20,6 +20,7 @@
 * [Array of N elements](https://www.hackerrank.com/challenges/fp-array-of-n-elements) - [source](src/main/scala/com/hackerrank/fp/introduction/arrayofnelements/ArrayOfNElements.scala)
 * [Reverse a List](https://www.hackerrank.com/challenges/fp-reverse-a-list) - [source](src/main/scala/com/hackerrank/fp/introduction/listreverse/ListReverse.scala)
 * [List Length](https://www.hackerrank.com/challenges/fp-list-length) - [source](src/main/scala/com/hackerrank/fp/introduction/listlength/ListLength.scala)
+* [Sum of Odd Elements](https://www.hackerrank.com/challenges/fp-sum-of-odd-elements) - [source](src/main/scala/com/hackerrank/fp/introduction/sumofoddelements/SumOfOddElements.scala)
 #### Recursion
 * [Sums of Power](https://www.hackerrank.com/challenges/functional-programming-the-sums-of-powers) - [source](src/main/scala/com/hackerrank/fp/recursion/sumsofpower/SumsOfPower.scala)
 #### Ad-hoc
