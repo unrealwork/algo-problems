@@ -22,6 +22,7 @@
 * [List Length](https://www.hackerrank.com/challenges/fp-list-length) - [source](src/main/scala/com/hackerrank/fp/introduction/listlength/ListLength.scala)
 * [Sum of Odd Elements](https://www.hackerrank.com/challenges/fp-sum-of-odd-elements) - [source](src/main/scala/com/hackerrank/fp/introduction/sumofoddelements/SumOfOddElements.scala)
 * [Area Under Curves and Volume of Revolving a Curve](https://www.hackerrank.com/challenges/area-under-curves-and-volume-of-revolving-a-curv) - [source](src/main/scala/com/hackerrank/fp/introduction/integral/Integral.scala)
+* [Functions or Not](https://www.hackerrank.com/challenges/functions-or-not) - [source](src/main/scala/com/hackerrank/fp/introduction/functionornot/FunctionOrNot.scala)
 #### Recursion
 * [Sums of Power](https://www.hackerrank.com/challenges/functional-programming-the-sums-of-powers) - [source](src/main/scala/com/hackerrank/fp/recursion/sumsofpower/SumsOfPower.scala)
 #### Ad-hoc
