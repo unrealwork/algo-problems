@@ -1,7 +1,10 @@
 package com.hackerrank.fp.recursion.gcd
 
+import scala.annotation.tailrec
+
 object GCD {
 
+  @tailrec
   def gcd(x: Int, y: Int): Int = {
     if (x == y) {
       x

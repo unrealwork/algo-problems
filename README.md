@@ -29,5 +29,6 @@
 #### Recursion
 * [Sums of Power](https://www.hackerrank.com/challenges/functional-programming-the-sums-of-powers) - [source](src/main/scala/com/hackerrank/fp/recursion/sumsofpower/SumsOfPower.scala)
 * [Computing the GCD](https://www.hackerrank.com/challenges/functional-programming-warmups-in-recursion---gcd?utm_campaign=challenge-recommendation&utm_medium=email&utm_source=24-hour-campaign) - [source](src/main/scala/com/hackerrank/fp/recursion/gcd/GCD.scala)
+* [Fibonacci Numbers](https://www.hackerrank.com/challenges/functional-programming-warmups-in-recursion---fibonacci-numbers) - [source](src/main/scala/com/hackerrank/fp/recursion/fibonacci/Fibonacci.scala)
 #### Ad-hoc
 * [String Rotation](https://www.hackerrank.com/challenges/rotate-string) - [source](src/main/scala/com/hackerrank/fp/adhoc/rotatestring/RotateString.scala)
