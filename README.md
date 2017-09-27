@@ -25,5 +25,6 @@
 * [Functions or Not](https://www.hackerrank.com/challenges/functions-or-not) - [source](src/main/scala/com/hackerrank/fp/introduction/functionornot/FunctionOrNot.scala)
 #### Recursion
 * [Sums of Power](https://www.hackerrank.com/challenges/functional-programming-the-sums-of-powers) - [source](src/main/scala/com/hackerrank/fp/recursion/sumsofpower/SumsOfPower.scala)
+* [String Mingling](https://www.hackerrank.com/challenges/string-mingling) - [source](src/main/scala/com/hackerrank/fp/recursion/stringmingling/StringMingling.scala)
 #### Ad-hoc
 * [String Rotation](https://www.hackerrank.com/challenges/rotate-string) - [source](src/main/scala/com/hackerrank/fp/adhoc/rotatestring/RotateString.scala)
