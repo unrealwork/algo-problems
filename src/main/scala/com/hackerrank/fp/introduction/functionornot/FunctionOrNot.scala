@@ -1,3 +1,4 @@
+
 package com.hackerrank.fp.introduction.functionornot
 
 import scala.io.StdIn
@@ -20,10 +21,11 @@ object FunctionOrNot {
     }).toList
 
     for (r <- solve(pointsSet)) {
-      if (r)
+      if (r) {
         println("YES")
-      else
+      } else {
         println("NO")
+      }
     }
   }
 }
