@@ -2,6 +2,9 @@ package com.hackerrank.ds.tree;
 
 class Node {
 
+  public Node() {
+  }
+
   public Node(int data) {
     this.data = data;
   }
