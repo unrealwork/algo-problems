@@ -1,0 +1,62 @@
+{
+  "placements": {
+    "widget-overflow-fixed-list": [],
+    "PersonalToolbar": [
+      "personal-bookmarks"
+    ],
+    "nav-bar": [
+      "back-button",
+      "forward-button",
+      "stop-reload-button",
+      "home-button",
+      "customizableui-special-spring1",
+      "urlbar-container",
+      "customizableui-special-spring2",
+      "downloads-button",
+      "library-button",
+      "screenshots_mozilla_org-browser-action",
+      "sidebar-button",
+      "87677a2c52b84ad3a151a4a72f5bd3c4_jetpack-browser-action",
+      "_46551ec9-40f0-4e47-8e18-8e5cf550cfb8_-browser-action",
+      "_394dcba4-1f92-4f8e-8ec9-8d2cb90cb69b_-browser-action",
+      "_hoxx-vpn-browser-action",
+      "adguardadblocker_adguard_com-browser-action"
+    ],
+    "TabsToolbar": [
+      "tabbrowser-tabs",
+      "new-tab-button",
+      "alltabs-button"
+    ],
+    "toolbar-menubar": [
+      "menubar-items"
+    ],
+    "addon-bar": [
+      "addonbar-closebutton",
+      "status-bar"
+    ]
+  },
+  "seen": [
+    "pocket-button",
+    "developer-button",
+    "webide-button",
+    "screenshots_mozilla_org-browser-action",
+    "_d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d_-browser-action",
+    "87677a2c52b84ad3a151a4a72f5bd3c4_jetpack-browser-action",
+    "stefanvandamme_stefanvd_net-browser-action",
+    "_46551ec9-40f0-4e47-8e18-8e5cf550cfb8_-browser-action",
+    "_394dcba4-1f92-4f8e-8ec9-8d2cb90cb69b_-browser-action",
+    "foxyproxy_eric_h_jung-browser-action",
+    "_hoxx-vpn-browser-action",
+    "adguardadblocker_adguard_com-browser-action"
+  ],
+  "dirtyAreaCache": [
+    "PersonalToolbar",
+    "nav-bar",
+    "TabsToolbar",
+    "toolbar-menubar",
+    "PanelUI-contents",
+    "addon-bar"
+  ],
+  "currentVersion": 12,
+  "newElementCount": 2
+}
