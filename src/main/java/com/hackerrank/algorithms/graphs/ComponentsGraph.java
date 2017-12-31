@@ -1,4 +1,4 @@
-package com.hackerrank.algorithms;
+package com.hackerrank.algorithms.graphs;
 
 import static java.util.stream.Collectors.toList;
 

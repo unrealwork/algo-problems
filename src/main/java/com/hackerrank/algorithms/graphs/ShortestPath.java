@@ -1,4 +1,4 @@
-package com.hackerrank.algorithms;
+package com.hackerrank.algorithms.graphs;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

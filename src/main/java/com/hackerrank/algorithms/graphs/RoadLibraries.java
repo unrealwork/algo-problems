@@ -1,13 +1,15 @@
-package com.hackerrank.algorithms;
+package com.hackerrank.algorithms.graphs;
 
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.OptionalInt;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class ConnectedCell {
+public class RoadLibraries {
 
   public interface Graph {
 
@@ -110,31 +112,6 @@ public class ConnectedCell {
     }
   }
 
-  public static void main(String[] args) {
-    Scanner in = new Scanner(System.in);
-    int n = in.nextInt();
-    int m = in.nextInt();
-    int grid[][] = new int[n][m];
-    for (int grid_i = 0; grid_i < n; grid_i++) {
-      for (int grid_j = 0; grid_j < m; grid_j++) {
-        grid[grid_i][grid_j] = in.nextInt();
-      }
-    }
-    System.out.println(solve(grid));
-  }
-
-  private static int solve(int[][] grid) {
-    Graph g = GraphUtils.build(grid);
-    Components components = new Components(g);
-    OptionalInt max = Arrays.stream(components.components()).mapToInt(Set::size)
-        .max();
-    if (max.isPresent()) {
-      return max.getAsInt();
-    } else {
-      throw new IllegalStateException();
-    }
-  }
-
   private static class Components {
 
     private int size;
@@ -170,7 +147,8 @@ public class ConnectedCell {
       }
     }
 
-    private void markComponent(Graph g, int componentNumber, int v) {
+    private void markComponent(Graph g, int componentNumber,
+        int v) {
       this.marked[v] = componentNumber;
       for (int w : g.adjacent(v)) {
         if (marked[w] < 0) {
@@ -180,7 +158,7 @@ public class ConnectedCell {
     }
   }
 
-  private static class GraphUtils {
+  static class GraphUtils {
 
     /**
      * Create empty graph with {@code v} vertices.
@@ -201,33 +179,43 @@ public class ConnectedCell {
     }
 
 
-    public static Graph build(int[][] grid) {
-      final int n = grid.length;
-      final int m = grid[0].length;
-      Graph graph = empty(n * m);
-      for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-          if (grid[i][j] == 1) {
-            final int v = j + i * m;
-            if (j + 1 < m && grid[i][j + 1] == 1) {
-              graph.addEdge(v, v + 1);
-            }
-            if (i + 1 < n && grid[i + 1][j] == 1) {
-              graph.addEdge(v, v + m);
-            }
-            if (j + 1 < m && i + 1 < n && grid[i + 1][j + 1] == 1) {
-              graph.addEdge(v, v + m + 1);
-            }
-            if (j > 1 && i + 1 < n && grid[i + 1][j - 1] == 1) {
-              graph.addEdge(v, v + m - 1);
-            }
-            if (j + 1 < m && i > 1 && grid[i - 1][j + 1] == 1) {
-              graph.addEdge(v, v - m + 1);
-            }
-          }
-        }
-      }
-      return graph;
+  }
+
+  static long roadsAndLibraries(Graph g, long libraryCost, long roadCost) {
+    if (libraryCost < roadCost) {
+      return g.vertices() * libraryCost;
     }
+    Components cc = new Components(g);
+    long res = 0;
+    Set<Integer>[] components = cc.components();
+    for (Set<Integer> component : components) {
+      final int size = component.size();
+      res += (size - 1) * roadCost + libraryCost;
+    }
+    return res;
+  }
+
+  public static void main(String[] args) {
+    solve(System.in, System.out);
+  }
+
+  public static OutputStream solve(InputStream is, PrintStream os) {
+    Scanner in = new Scanner(is);
+    int q = in.nextInt();
+    for (int a0 = 0; a0 < q; a0++) {
+      int n = in.nextInt();
+      int m = in.nextInt();
+      long libraryCost = in.nextLong();
+      long roadCost = in.nextLong();
+      Graph graph = GraphUtils.empty(n);
+      for (int i = 0; i < m; i++) {
+        graph.addEdge(in.nextInt() - 1, in.nextInt() - 1);
+      }
+      long result = roadsAndLibraries(graph, libraryCost, roadCost);
+      os.println(result);
+    }
+    in.close();
+    return os;
   }
 }
+  
