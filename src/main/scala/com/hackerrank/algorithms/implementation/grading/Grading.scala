@@ -1,3 +1,4 @@
+
 package com.hackerrank.algorithms.implementation.grading
 
 object Grading {
@@ -5,9 +6,9 @@ object Grading {
   val DiffEdge = 3
 
   def correctedGrade(grade: Int): Int = {
-    if (grade % 5 == 0 || grade < NotModifyDiffEdge)
+    if (grade % 5 == 0 || grade < NotModifyDiffEdge) {
       grade
-    else {
+    } else {
       val nextScore = (grade / 5 + 1) * 5
       val diff = nextScore - grade
       if (diff < DiffEdge)
