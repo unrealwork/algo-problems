@@ -1,6 +1,10 @@
+package com.hackerrank.algorithms.recursion;
+
+
 import java.util.Scanner;
 
 public class ArithmeticExpressions {
+
   static public void main(String[] args) {
     Scanner in = new Scanner(System.in);
 
@@ -21,38 +25,52 @@ public class ArithmeticExpressions {
 
   private static void solve(int[] numbers, char[] operators) {
 
-    memo = new boolean[2 * 101][operators.length]; // 2x is required to include negative values too
+    memo = new boolean[2
+        * 101][operators.length]; // 2x is required to include negative values too
     solve(numbers, operators, 0, numbers[0]);
   }
 
   static boolean[][] memo;
 
-  private static boolean solve(int[] numbers, char[] operators, int i, int result) {
+  private static boolean solve(int[] numbers, char[] operators, int i,
+      int result) {
 
     result %= 101;
 
     if (result == 0) {
-      while (i < operators.length) operators[i++] = '*';
+      while (i < operators.length) {
+        operators[i++] = '*';
+      }
       return true;
     }
 
-    if (i == operators.length) return false;
+    if (i == operators.length) {
+      return false;
+    }
 
-    if (memo[101 + result][i]) return false;
+    if (memo[101 + result][i]) {
+      return false;
+    }
 
     int current = numbers[i + 1] % 101;
 
     operators[i] = '+';
     int plusRes = (result + current);
-    if (solve(numbers, operators, i + 1, plusRes)) return true;
+    if (solve(numbers, operators, i + 1, plusRes)) {
+      return true;
+    }
 
     operators[i] = '-';
     int minusRes = (result - current);
-    if (solve(numbers, operators, i + 1, minusRes)) return true;
+    if (solve(numbers, operators, i + 1, minusRes)) {
+      return true;
+    }
 
     operators[i] = '*';
     int mulRes = (result * current);
-    if (solve(numbers, operators, i + 1, mulRes)) return true;
+    if (solve(numbers, operators, i + 1, mulRes)) {
+      return true;
+    }
 
     memo[101 + result][i] = true;
     return false;
