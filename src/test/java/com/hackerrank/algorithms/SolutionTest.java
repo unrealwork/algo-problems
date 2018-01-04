@@ -2,12 +2,12 @@ package com.hackerrank.algorithms;
 
 import static com.hackerrank.SolutionIO.io;
 
+import com.hackerrank.Solution;
 import com.hackerrank.SolutionIO;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
@@ -17,13 +17,13 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utils.StreamUtils;
 
-public abstract class AbstractTest {
+public abstract class SolutionTest {
 
   public Optional<String> casesDirectory() {
     return Optional.empty();
   }
 
-  public abstract OutputStream solve(InputStream is, PrintStream os);
+  public abstract Solution solver();
 
   public abstract List<SolutionIO> testCases();
 
@@ -35,7 +35,7 @@ public abstract class AbstractTest {
     String result;
     String expectedResult;
     try (ByteArrayOutputStream os = new ByteArrayOutputStream()) {
-      solve(is, new PrintStream(os));
+      solver().solve(is, new PrintStream(os));
       result = os.toString(StandardCharsets.UTF_8.name());
       expectedResult = StreamUtils.toString(clazz
           .getResourceAsStream(expectedResultFileName));
