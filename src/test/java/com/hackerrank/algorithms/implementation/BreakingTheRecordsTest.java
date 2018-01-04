@@ -9,12 +9,13 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class BreakingTheRecordsTest extends AbstractTest {
 
   @Override
-  public String casesDirectory() {
-    return "breaking-the-records";
+  public Optional<String> casesDirectory() {
+    return Optional.of("breaking-the-records");
   }
 
   @Override

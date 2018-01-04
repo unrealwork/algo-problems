@@ -11,6 +11,7 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.Optional;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -18,8 +19,8 @@ import utils.StreamUtils;
 
 public abstract class AbstractTest {
 
-  public String casesDirectory() {
-    return "";
+  public Optional<String> casesDirectory() {
+    return Optional.empty();
   }
 
   public abstract OutputStream solve(InputStream is, PrintStream os);
@@ -55,6 +56,8 @@ public abstract class AbstractTest {
   }
 
   private String casesPath(String inputFileName) {
-    return casesDirectory() + File.separator + inputFileName;
+    Optional<String> s = casesDirectory();
+    String prefix = s.map(s1 -> (s1 + File.separator)).orElse("");
+    return prefix + inputFileName;
   }
 }
