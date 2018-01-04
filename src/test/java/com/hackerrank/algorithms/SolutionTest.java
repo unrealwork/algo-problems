@@ -45,7 +45,6 @@ public abstract class SolutionTest {
     }
   }
 
-
   @DataProvider
   public Object[][] solutionProvider() {
     return testCases().stream().map(solutionIO -> io(
