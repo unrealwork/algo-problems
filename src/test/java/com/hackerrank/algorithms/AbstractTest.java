@@ -1,7 +1,10 @@
 package com.hackerrank.algorithms;
 
+import static com.hackerrank.SolutionIO.io;
+
 import com.hackerrank.SolutionIO;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -14,6 +17,10 @@ import org.testng.annotations.Test;
 import utils.StreamUtils;
 
 public abstract class AbstractTest {
+
+  public String casesDirectory() {
+    return "";
+  }
 
   public abstract OutputStream solve(InputStream is, PrintStream os);
 
@@ -37,9 +44,17 @@ public abstract class AbstractTest {
     }
   }
 
+
   @DataProvider
   public Object[][] solutionProvider() {
-    return testCases().stream().map(SolutionIO::fields)
+    return testCases().stream().map(solutionIO -> io(
+        casesPath(solutionIO.getInputFileName()),
+        casesPath(solutionIO.getOutputFileName())))
+        .map(SolutionIO::fields)
         .toArray(Object[][]::new);
+  }
+
+  private String casesPath(String inputFileName) {
+    return casesDirectory() + File.separator + inputFileName;
   }
 }
