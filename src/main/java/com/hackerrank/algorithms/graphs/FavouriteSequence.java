@@ -11,6 +11,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.NavigableSet;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
@@ -51,7 +52,6 @@ public class FavouriteSequence implements Solution {
   }
 
 
-
   private interface Graph<T> {
 
     /**
@@ -68,7 +68,7 @@ public class FavouriteSequence implements Solution {
      * @param v - vertex of the graph;
      * @return Iterable<Integer> of vertexes.
      */
-    Iterable<T> adjacent(T v);
+    TreeSet<T> adjacent(T v);
 
 
     /**
@@ -142,11 +142,13 @@ public class FavouriteSequence implements Solution {
     }
 
     @Override
-    public Iterable<T> adjacent(T v) {
+    public TreeSet<T> adjacent(T v) {
       validateVertex(v);
-      return adjacent.get(valueIndexDict.get(v)).stream()
-          .map(indexDictValue::get).collect(
-              Collectors.toList());
+      TreeSet<T> a = new TreeSet<>();
+      for (int w : adjacent.get(valueIndexDict.get(v))) {
+        a.add(indexDictValue.get(w));
+      }
+      return a;
     }
 
     @Override
@@ -203,7 +205,8 @@ public class FavouriteSequence implements Solution {
 
     private void dfs(Digraph<T> g, T v) {
       marked[g.indexOf(v)] = true;
-      for (T w : g.adjacent(v)) {
+      NavigableSet<T> ts = g.adjacent(v);
+      for (T w : ts.descendingSet()) {
         if (!marked[g.indexOf(w)]) {
           marked[g.indexOf(w)] = true;
           dfs(g, w);

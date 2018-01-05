@@ -7,12 +7,10 @@ import java.io.PrintStream;
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Queue;
-import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.Stack;
 import java.util.TreeSet;
-import java.util.stream.IntStream;
 
 public class KnightL implements Solution {
 
@@ -246,15 +244,7 @@ public class KnightL implements Solution {
   }
 
   public static void main(String[] args) {
-    //new KnightL().solve(System.in, System.out);
-    Random random = new Random();
-    final int size = random.nextInt(SIZE);
-    int[] arr = new int[size];
-    for (int i = 0; i < arr.length; i++) {
-      arr[i] = random.nextInt(101);
-    }
-    System.out.println(Arrays.toString(arr));
-    IntStream.range(0, random.nextInt(maximumSize)).map(i -> random.nextInt(101)).toArray();
+    new KnightL().solve(System.in, System.out);
   }
 
 
