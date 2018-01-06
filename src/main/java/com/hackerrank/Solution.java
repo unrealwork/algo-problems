@@ -5,5 +5,6 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 public interface Solution {
-  OutputStream solve(InputStream in, PrintStream os);
+
+  OutputStream solve(InputStream is, PrintStream os);
 }
