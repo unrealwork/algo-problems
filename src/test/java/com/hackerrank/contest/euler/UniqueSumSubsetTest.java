@@ -24,9 +24,9 @@ public class UniqueSumSubsetTest extends SolutionTest {
   @Override
   public List<SolutionIO> testCases() {
     return Arrays.asList(
-//        io("0.in", "0.out"),
-//        io("1.in", "1.out"),
-//        io("1.in", "1.out"),
+        io("0.in", "0.out"),
+        io("1.in", "1.out"),
+        io("1.in", "1.out"),
         io("3.in", "3.out")
     );
   }
