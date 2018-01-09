@@ -39,8 +39,8 @@ public class UniqueSumSubset implements Solution {
 //    permutation(new int[k], 0, 0, dict, 0);
 //    os.println(res);
     int[] dict1 = IntStream.rangeClosed(1, 100).map(i -> i * i).toArray();
-//    os.println(solve2(dict1, 50));
-    os.println(solve2(dict, k));
+    os.println(solve2(dict1, 50));
+//    os.println(solve2(dict, k));
     return os;
   }
 
@@ -83,14 +83,13 @@ public class UniqueSumSubset implements Solution {
       }
       State state = (State) o;
       return sum == state.sum &&
-          lastAddedIndex == state.lastAddedIndex &&
           length == state.length;
     }
 
     @Override
     public int hashCode() {
 
-      return Objects.hash(sum, lastAddedIndex, length);
+      return Objects.hash(sum, length);
     }
 
     public boolean isBad() {
@@ -205,7 +204,7 @@ public class UniqueSumSubset implements Solution {
           nextStates.add(nextState);
         }
       }
-      if (i + 1 < k) {
+     /* if (i + 1 < k) {
         Optional<Integer> limit = Optional.empty();
         Iterator<State> it = nextStates.iterator();
         Optional<State> lastAdded = Optional.empty();
@@ -231,7 +230,7 @@ public class UniqueSumSubset implements Solution {
             nextStates.removeIf(s -> s.isBad);
           }
         }
-      }
+      }*/
       states = nextStates;
     }
     return uniqueSum(states);
@@ -256,6 +255,7 @@ public class UniqueSumSubset implements Solution {
         .mapToInt(Entry::getKey).sum();
 
   }
+
 
   public static void main(String[] args) {
     new UniqueSumSubset().solve(System.in, System.out);
