@@ -13,11 +13,11 @@ public class LuckContest {
         .map(c -> c[0]).sorted((a, b) -> -Integer.compare(a, b))
         .mapToInt(Integer::intValue).toArray();
     int sum = 0;
-    for (int i = 0; i<important.length; i++) {
-      if (i<k) {
-        sum+=important[i];
+    for (int i = 0; i < important.length; i++) {
+      if (i < k) {
+        sum += important[i];
       } else {
-        sum-=important[i];
+        sum -= important[i];
       }
     }
     return sum + unimportant;
