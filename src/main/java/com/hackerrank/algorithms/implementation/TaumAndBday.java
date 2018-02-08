@@ -16,8 +16,10 @@ public class TaumAndBday {
         return Math.min(y, x + z);
     }
 
-    static long giftCost(int bestBlack, int bestWhite, int b, int w) {
-        return b * bestBlack + bestWhite * w;
+    static long giftCost(long bestBlack, long bestWhite, long b, long w) {
+        long bC = b * bestBlack;
+        long wC = bestWhite * w;
+        return bC + wC;
     }
 
     public static void main(String[] args) {
