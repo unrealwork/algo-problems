@@ -15,7 +15,7 @@ import java.util.Optional;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import utils.StreamUtils;
+import com.utils.StreamUtils;
 
 public abstract class SolutionTest {
 

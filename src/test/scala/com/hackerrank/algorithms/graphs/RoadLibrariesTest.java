@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import utils.StreamUtils;
+import com.utils.StreamUtils;
 
 public class RoadLibrariesTest {
 

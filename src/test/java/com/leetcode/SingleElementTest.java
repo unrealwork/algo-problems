@@ -1,4 +1,4 @@
-package leetcode;
+package com.leetcode;
 
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
