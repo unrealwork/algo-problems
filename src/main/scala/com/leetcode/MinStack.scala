@@ -3,7 +3,6 @@ package com.leetcode
 
 class MinStack {
   private var tail: Option[Node[Int]] = Option.empty
-  private var min: Option[Int] = Option.empty
 
   /** initialize your data structure here. */
   private class Node[T](_value: T, _next: Option[Node[T]],
