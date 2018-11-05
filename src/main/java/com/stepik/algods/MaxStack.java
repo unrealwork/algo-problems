@@ -10,8 +10,8 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 public class MaxStack {
     private static class Commands {
         public static final String MAX = "max";
-        public static final String PUSH = "push ";
-        public static final String POP = "pop";
+        static final String PUSH = "push ";
+        static final String POP = "pop";
     }
 
     public static void main(String[] args) {
