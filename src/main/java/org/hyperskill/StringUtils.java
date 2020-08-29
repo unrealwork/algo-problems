@@ -20,4 +20,27 @@ class StringUtils {
         }
         return p;
     }
+
+    static int kmp(final String text, final String pattern) {
+        final int[] p = prefixFunction(pattern);
+        int i = 0;
+        final int textSize = text.length();
+        final int patternSize = pattern.length();
+        while (i < textSize) {
+            int j = 0;
+            int k = i;
+            while (text.charAt(k) == pattern.charAt(j)) {
+                j++;
+                k++;
+                if (j == patternSize) {
+                    return k - patternSize;
+                }
+                if (k == textSize) {
+                    return -1;
+                }
+            }
+            i += (p[j] + 1);
+        }
+        return -1;
+    }
 }

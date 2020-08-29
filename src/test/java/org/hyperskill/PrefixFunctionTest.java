@@ -10,11 +10,11 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class StringUtilsTest extends TestCase {
+public class PrefixFunctionTest extends TestCase {
     private final String string;
     private final int[] expectedResult;
 
-    public StringUtilsTest(String string, int[] expectedResult) {
+    public PrefixFunctionTest(String string, int[] expectedResult) {
         this.string = string;
         this.expectedResult = expectedResult;
     }
