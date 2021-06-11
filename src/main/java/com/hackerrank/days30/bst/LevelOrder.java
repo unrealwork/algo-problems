@@ -22,18 +22,16 @@ class LevelOrder {
             lastLevel.add(root);
         }
         while (!lastLevel.isEmpty()) {
-            final LinkedList<Node> next = new LinkedList<>();
             while (!lastLevel.isEmpty()) {
                 final Node parent = lastLevel.remove();
-                System.out.printf("%d ",parent.data);
+                System.out.printf("%d ", parent.data);
                 if (parent.left != null) {
-                    next.add(parent.left);
+                    lastLevel.add(parent.left);
                 }
                 if (parent.right != null) {
-                    next.add(parent.right);
+                    lastLevel.add(parent.right);
                 }
             }
-            lastLevel.addAll(next);
         }
     }
 
