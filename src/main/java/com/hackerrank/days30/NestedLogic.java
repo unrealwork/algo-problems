@@ -22,10 +22,9 @@ public class NestedLogic {
                 if (date1.getMonth().getValue() > date2.getMonth().getValue()) {
                     return 500 * (date1.getMonth().getValue() - date2.getMonth().getValue());
                 } else {
-                    if (date1.getMonth().getValue() == date2.getMonth().getValue()) {
-                        if (date1.getDayOfMonth() > date2.getDayOfMonth()) {
-                            return 15 * (date1.getDayOfMonth() - date2.getDayOfMonth());
-                        }
+                    if (date1.getMonth().getValue() == date2.getMonth().getValue() &&
+                            date1.getDayOfMonth() > date2.getDayOfMonth()) {
+                        return 15 * (date1.getDayOfMonth() - date2.getDayOfMonth());
                     }
                 }
             }
