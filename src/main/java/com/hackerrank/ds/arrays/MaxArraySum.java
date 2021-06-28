@@ -1,29 +1,24 @@
 package com.hackerrank.ds.arrays;
 
 import java.io.*;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MaxArraySum {
 
     // Complete the maxSubsetSum function below.
     static long maxSubsetSum(int[] arr) {
-        long max = 0; // empty subset
-        long[][] d = new long[arr.length][arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            for (int step = 1;  i + step < arr.length; step++) {
-                d[i][step] = arr[i];
-            }
-            if (arr[i] > max) {
-                max = arr[i];
-            }
-            for (int step = 2; step <= i && i - step > -1; step++) {
-                d[i - step][step] += arr[i];
-                if (d[i - step][step] > max) {
-                    max = d[i - step][step];
-                }
+        long[] d = new long[arr.length];
+        d[0] = Math.max(arr[0], d[0]);
+        d[1] = Math.max(arr[0], arr[1]);
+        for (int i = 2; i < arr.length; i++) {
+            d[i] = Math.max(arr[i], 0);
+            d[i] = Math.max(d[i - 1], d[i - 2] + arr[i]);
+            if (0 > d[i]) {
+                d[i] = 0;
             }
         }
-        return max;
+        return d[arr.length - 1];
     }
 
     private static final Scanner scanner = new Scanner(System.in);
