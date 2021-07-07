@@ -41,21 +41,36 @@ public class Encryption {
             final double sqrt = Math.sqrt(noWhitespaces.length());
             final int columns = (int) Math.ceil(sqrt);
             final int rows = (int) Math.floor(sqrt);
-            final int size = columns + noWhitespaces.length();
             int j = 0;
             int i = 0;
-            final char[] symbols = new char[size];
-            Arrays.fill(symbols, ' ');
+            final char[][] symbols = new char[rows * columns < noWhitespaces.length() ? rows + 1 : rows][columns];
+            for (int i1 = 0; i1 < symbols.length; i1++) {
+                Arrays.fill(symbols[i1], ' ');
+            }
             for (int k = 0; k < noWhitespaces.length(); k++) {
                 final char c = noWhitespaces.charAt(k);
-                symbols[j * rows + i + j] = c;
+                symbols[i][j] = c;
                 j++;
                 if (j == columns) {
                     j = 0;
                     i++;
                 }
             }
-            return new String(symbols).trim().replaceAll(" +", " ");
+            final StringBuilder sb = new StringBuilder();
+            for (int ii = 0; ii < columns; ii++) {
+                boolean isLastExist = true;
+                for (int jj = 0; jj < symbols.length; jj++) {
+                    sb.append(symbols[jj][ii]);
+                    if (symbols[jj][ii] == ' ') {
+                        isLastExist = false;
+                        break;
+                    }
+                }
+                if (isLastExist) {
+                    sb.append(' ');
+                }
+            }
+            return sb.toString().trim();
         }
 
     }
