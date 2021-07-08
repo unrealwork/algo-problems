@@ -44,8 +44,8 @@ public class Encryption {
             int j = 0;
             int i = 0;
             final char[][] symbols = new char[rows * columns < noWhitespaces.length() ? rows + 1 : rows][columns];
-            for (int i1 = 0; i1 < symbols.length; i1++) {
-                Arrays.fill(symbols[i1], ' ');
+            for (char[] symbol : symbols) {
+                Arrays.fill(symbol, ' ');
             }
             for (int k = 0; k < noWhitespaces.length(); k++) {
                 final char c = noWhitespaces.charAt(k);
