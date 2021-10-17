@@ -1,6 +1,10 @@
 package com.hackerrank.algorithms.dynamic;
 
 public class MinimumSwaps {
+    private MinimumSwaps() {
+        
+    }
+
     static int minimumSwaps(int[] arr) {
         int count = 0;
         for (int i = 0; i < arr.length; i++) {

@@ -17,10 +17,11 @@ public class MinimumSwapsTest {
     public MinimumSwapsTest(TestCase testCase) {
         this.testCase = testCase;
     }
+
     @Parameterized.Parameters
-    public static final Collection<Object[]> testCases() {
+    public static Collection<Object[]> testCases() {
         return asList(new Object[][]{
-                {testCase(3, 
+                {testCase(3,
                         4, 3, 1, 2)},
                 {testCase(3,
                         2, 3, 4, 1, 5)
