@@ -1,6 +1,5 @@
 package com.hackerrank.algorithms.dynamic;
 
-import java.util.Arrays;
 import java.util.function.BooleanSupplier;
 
 /**
@@ -16,9 +15,6 @@ public class Abbreviation {
   private Abbreviation() {}
 
   public static String abbreviation(String a, String b) {
-    // Write your code here
-    final int[] dp = new int[b.length()];
-    Arrays.fill(dp, -1);
     final Solver solver = new Solver(a, b);
     return solver.solve(0, 0) ? "YES" : "NO";
   }
