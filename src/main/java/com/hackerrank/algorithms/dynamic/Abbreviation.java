@@ -52,8 +52,8 @@ public class Abbreviation {
             if (bIndex == b.length()) {
               return Character.isLowerCase(aSymbol) && solve(bIndex, aIndex + 1);
             }
-            final char bSymbol = b.charAt(bIndex);
 
+            final char bSymbol = b.charAt(bIndex);
             if (Character.isLowerCase(aSymbol)) {
               if (Character.toUpperCase(aSymbol) == bSymbol) {
                 return solve(bIndex + 1, aIndex + 1) || solve(bIndex, aIndex + 1);
