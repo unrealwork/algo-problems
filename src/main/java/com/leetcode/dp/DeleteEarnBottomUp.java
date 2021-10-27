@@ -10,7 +10,7 @@ public class DeleteEarnBottomUp {
     Map<Integer, Integer> countMap = new TreeMap<>();
     for (int num : nums) {
       countMap.putIfAbsent(num, 0);
-      countMap.computeIfPresent(num, (k, v) -> v + 1);
+      countMap.computeIfPresent(num, (k, v) -> v + 1);  
     }
     int[] dp = new int[countMap.size()];
     final Integer[] keys = countMap.keySet().toArray(new Integer[] {countMap.size()});
