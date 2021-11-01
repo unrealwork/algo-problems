@@ -3,13 +3,25 @@ package com.leetcode.search;
 public class StrStr {
   private StrStr() {}
 
-  private static int[] lps(String pattern) {
-    int[] lps = new int[pattern.length()];
-    for (int i = 1; i < pattern.length(); i++) {
-      if (pattern.charAt(lps[i - 1]) == pattern.charAt(i)) {
-        lps[i] = lps[i - 1] + 1;
+  private static int[] lps(String pat) {
+    int len = 0;
+    int i = 1;
+    int[] lps = new int[pat.length()];
+    int m = lps.length;
+    lps[0] = 0;
+
+    while (i < m) {
+      if (pat.charAt(i) == pat.charAt(len)) {
+        len++;
+        lps[i] = len;
+        i++;
       } else {
-        lps[i] = 0;
+        if (len != 0) {
+          len = lps[len - 1];
+        } else {
+          lps[i] = len;
+          i++;
+        }
       }
     }
     return lps;
