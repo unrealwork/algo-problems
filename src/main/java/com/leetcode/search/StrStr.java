@@ -7,6 +7,9 @@ public class StrStr {
     int len = 0;
     int i = 1;
     int[] lps = new int[pat.length()];
+    if (lps.length == 0) {
+      return lps;
+    }
     int m = lps.length;
     lps[0] = 0;
 
