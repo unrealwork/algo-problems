@@ -19,9 +19,9 @@ public class MinFallingPathSum {
     }
 
     public int solve() {
-      int min = solve(matrix.length - 1, 0, 0);
+      int min = solve(matrix.length - 1, 0);
       for (int i = 1; i < matrix.length; i++) {
-        int res = solve(matrix.length - 1, i, 0);
+        int res = solve(matrix.length - 1, i);
         if (res < min) {
           min = res;
         }
@@ -36,7 +36,7 @@ public class MinFallingPathSum {
       return memo[i][j];
     }
 
-    private int solve(int row, int column, int res) {
+    private int solve(int row, int column) {
       if (column >= matrix.length || column < 0) {
         return Integer.MAX_VALUE;
       }
@@ -50,8 +50,8 @@ public class MinFallingPathSum {
               final int nr = row - 1;
               return matrix[row][column]
                   + Math.min(
-                      solve(nr, column, res),
-                      Math.min(solve(nr, column - 1, res), solve(nr, column + 1, res)));
+                      solve(nr, column),
+                      Math.min(solve(nr, column - 1), solve(nr, column + 1)));
             }
           });
     }
