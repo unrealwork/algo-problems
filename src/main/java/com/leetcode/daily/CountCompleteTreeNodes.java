@@ -1,5 +1,7 @@
 package com.leetcode.daily;
 
+import com.leetcode.ds.tree.TreeNode;
+
 public class CountCompleteTreeNodes {
   public int countNodes(TreeNode root) {
     throw new IllegalStateException();
@@ -48,21 +50,4 @@ public class CountCompleteTreeNodes {
     }
   }
 
-  static class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {}
-
-    TreeNode(int val) {
-      this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-      this.val = val;
-      this.left = left;
-      this.right = right;
-    }
-  }
 }
