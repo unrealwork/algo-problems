@@ -6,10 +6,9 @@ public class TwoSumBST {
   public boolean findTarget(TreeNode root, int k) {
     int[] dict = preorderTraversal(root);
     for (int i = 0; i < dict.length; i++) {
-      if (dict[i] > 0) {
-        if (dict[k - i])
-      }
+      if (dict[i] > 0) {}
     }
+    return false;
   }
 
   public int[] preorderTraversal(TreeNode root) {
