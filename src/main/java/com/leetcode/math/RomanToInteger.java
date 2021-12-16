@@ -24,28 +24,32 @@ public class RomanToInteger {
   public static int romanToInt(String s) {
     int res = 0;
     int accPart = 0;
-    if (s.length() < 2) {
+    if (isOneDigitNumber(s)) {
       return ROMAN_DIGIT_DICT.get(s.charAt(0));
     }
     for (int i = 0; i < s.length() - 1; i++) {
-      int currentRomanDigit = ROMAN_DIGIT_DICT.get(s.charAt(i));
-      int nextRomanDigit = ROMAN_DIGIT_DICT.get(s.charAt(i + 1));
+      int currentRomanDigit = romanDigitToDecimal(s, i);
+      int nextRomanDigit = romanDigitToDecimal(s, i + 1);
       accPart += currentRomanDigit;
 
       if (isPreLastIndex(s, i)) {
         res += nextRomanDigit;
       }
       if (currentRomanDigit != nextRomanDigit) {
-        if (nextRomanDigit > currentRomanDigit) {
-          res -= accPart;
-        } else {
-          res += accPart;
-        }
+        res += nextRomanDigit > currentRomanDigit ? -accPart : accPart;
         accPart = 0;
       }
     }
     res += accPart;
     return res;
+  }
+
+  private static int romanDigitToDecimal(final String s, final int i) {
+    return ROMAN_DIGIT_DICT.get(s.charAt(i));
+  }
+
+  private static boolean isOneDigitNumber(String s) {
+    return s.length() < 2;
   }
 
   private static boolean isPreLastIndex(String s, int index) {
