@@ -79,12 +79,5 @@ class WordDictionary {
             return nodes[c - 'a'];
         }
 
-        boolean isTerminal() {
-            return isTerminal;
-        }
-
-        boolean hasChild(char c) {
-            return getChild(c) != null;
-        }
     }
 }
