@@ -4,33 +4,14 @@ public class BestTimeToBuyAndSell {
   private BestTimeToBuyAndSell() {}
 
   public static int maxProfit(int[] prices) {
-    Iteration it = new Iteration(prices[0], 0);
+    int res = 0;
+    int curMin = prices[0];
     for (int i = 1; i < prices.length; i++) {
-      it = it.next(prices[i]);
-    }
-    return it.getProfit();
-  }
-
-  private static class Iteration {
-    private final int min;
-    private final int profit;
-
-    private Iteration(int min, int profit) {
-      this.min = min;
-      this.profit = profit;
-    }
-
-    public Iteration next(int curValue) {
-      int nextMin = Math.min(curValue, min);
-      if (curValue - nextMin > profit) {
-        return new Iteration(nextMin, curValue - nextMin);
-      } else {
-        return new Iteration(nextMin, profit);
+      res = Math.max(res, prices[i] - curMin);
+      if (prices[i] < curMin) {
+        curMin = prices[i];
       }
     }
-
-    public int getProfit() {
-      return profit;
-    }
+    return res;
   }
 }
