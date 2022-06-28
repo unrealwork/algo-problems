@@ -6,14 +6,14 @@ import java.util.List;
 
 class NaryPreorderTraversal {
     private NaryPreorderTraversal() {
-        
+
     }
 
     public static List<Integer> preorder(Node root) {
-        final List<Integer> res = new LinkedList<>();
         if (root == null) {
             return Collections.emptyList();
         }
+        final List<Integer> res = new LinkedList<>();
         preorder(root, res);
         return res;
     }
