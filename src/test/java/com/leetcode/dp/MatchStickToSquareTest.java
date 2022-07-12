@@ -30,7 +30,8 @@ public class MatchStickToSquareTest {
                 {new int[] {1, 1, 2, 2, 2}, true},
                 {new int[] {3, 3, 3, 3, 4}, false},
                 {new int[] {5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3}, true},
-                {new int[] {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 102}, false}
+                {new int[] {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 102}, false},
+                {new int[] {4, 13, 1, 1, 14, 15, 1, 3, 13, 1, 3, 5, 2, 8, 12}, false}
         });
     }
 }

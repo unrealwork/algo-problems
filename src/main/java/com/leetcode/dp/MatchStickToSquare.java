@@ -1,5 +1,7 @@
 package com.leetcode.dp;
 
+import java.util.Arrays;
+
 final class MatchStickToSquare {
     private MatchStickToSquare() {
         
@@ -18,16 +20,17 @@ final class MatchStickToSquare {
         if (max > target) {
             return false;
         }
-        return makeSquareRec(matchsticks, new int[4], new Boolean[matchsticks.length + 1][4], target, 0);
+        Arrays.sort(matchsticks);
+        return makeSquareRec(matchsticks, new int[4], new Boolean[matchsticks.length + 1][4], target, matchsticks.length - 1);
     }
 
     private static boolean makeSquareRec(int[] mathsticks, int[] buckets, Boolean[][] dp, int target, int curIndex) {
-        if (curIndex == mathsticks.length) {
+        if (curIndex < 0) {
             return true;
         }
         for (int i = 0; i < buckets.length; i++) {
             buckets[i] += mathsticks[curIndex];
-            if (buckets[i] <= target && makeSquareRec(mathsticks, buckets, dp, target, curIndex + 1)) {
+            if (buckets[i] <= target && makeSquareRec(mathsticks, buckets, dp, target, curIndex - 1)) {
                 return true;
             } else {
                 buckets[i] -= mathsticks[curIndex];
